@@ -14,6 +14,8 @@ public class FlamesCheckService
 		//Getting inputs - name 1 and name 2
 		StringBuffer n1 = new StringBuffer(name1);
 		StringBuffer n2 = new StringBuffer(name2);
+		System.out.println("Your name is " + n1);
+		System.out.println("Your partner name is " + n2);
 		int name1Length = n1.length();
 		int name2Length = n2.length();
 		
@@ -71,6 +73,25 @@ public class FlamesCheckService
 	    	}
 	   	}
 		char finalResult = flames.charAt(0);
+		char[] flamesCharacters = {'f', 'l', 'a', 'm', 'e', 's'}; 
+		if(finalResult == flamesCharacters[0]) {
+			System.out.println("Your two are FRIENDS");
+		}
+		else if(finalResult == flamesCharacters[1]) {
+			System.out.println("Your two are LOVERS");
+		}
+		else if(finalResult == flamesCharacters[2]) {
+			System.out.println("Your two are AFFECTIONATE");
+		}
+		else if(finalResult == flamesCharacters[3]) {
+			System.out.println("Your two will get MARRIED");
+		}
+		else if(finalResult == flamesCharacters[4]) {
+			System.out.println("Your two are ENEMIES");
+		}
+		else {
+			System.out.println("Your two are SIBLINGS");
+		}
 		return finalResult;
 	}	
 }
